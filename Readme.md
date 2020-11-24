@@ -1,6 +1,6 @@
 ---
-title: Template
-author: Zuletzt bearbeitet von Alexander Bazo
+title: Übungsblatt 7
+author: Zuletzt bearbeitet von Jürgen Hahn
 documentclass: scrartcl
 classoption:
   - a4paper
@@ -12,17 +12,17 @@ header-includes: |
     \pagestyle{fancy}
     \fancyhf{}
     \rhead{OOP WS 2020/21}
-    \lhead{U00 | Template}
+    \lhead{U07 | Übungsblatt 7}
     \cfoot{\includegraphics[height=2cm]{docs/footer.png}}
     \fancypagestyle{plain}{
       \fancyhf{}
       \rhead{OOP WS 2020/21}
-      \lhead{U00 | Template}
+      \lhead{U07 | Übungsblatt 7}
       \cfoot[C]{\includegraphics[height=2cm]{docs/footer.png}}}
 ---
 
 
-# Übungsblatt 10
+# Übungsblatt 7
 
 ## Wichtige Informationen zur Bearbeitung der Aufgabe 
 
@@ -36,7 +36,7 @@ header-includes: |
 unterschiedlichen Klassen sowie die beiden Bilddateien, die Sie als
 Ausgangsmaterial für die entsprechenden Aufgaben verwenden können.
 
- - [Starterpaket](https://github.com/OOP-Regensburg/U10-GraphicsApp/archive/Starterpaket.zip)
+ - [Starterpaket](https://github.com/OOP-Ubungen-WS2020-21/U07-GraphicsApp/archive/Starterpaket.zip)
 
 ## Car-Simulator
 
@@ -60,7 +60,7 @@ Straße animiert:
 -   Die Geschwindigkeit des Fahrzeugs wird ebenfalls zufällig bestimmt
     (zwischen `2.0` und `10.0`).
 
-![image](img/09_cars.png)
+![Cars!](docs/09_cars.png){ width=25% }
 
 Die Klasse `Car` ist vollständig für die Berechnung der Fahrzeugfarben
 und Positionen zuständig. Aus der Klasse `Cars` werden lediglich die Methoden `update``()` und `draw``()` der Objekte der Klasse `Car` aufgerufen. Gegeben ist der folgende Code:
@@ -124,7 +124,7 @@ aus einem Image-Objekt die Pixel-Daten ausliest und anschließend so
 umdreht, dass das Bild horizontal gespiegelt und dann als neues
 Image-Objekt zurückgegeben wird.
 
-![image](img/09_sopranos.png)
+![Sopranos](docs/09_sopranos.png){ width=25% }
 
 Gegeben ist folgender Rumpf:
 ```
@@ -177,9 +177,9 @@ sollen Sie ähnlich wie bei der vorherigen Aufgabe nun einen
 Weichzeichnerfilter (Blur) implementieren. **Ein verschwommener Pixel
 entspricht den Durchschnittswerten aller Farbwerte des Pixels selbst und aller Farbwerte der umgebenden Pixel**. Die Effekte eines Weichzeichners zeigen die folgenden Abbildungen.
 
-![Bild ohne Blureffekt](img/10_the_office_orig.png)
+![Bild ohne Blureffekt](docs/10_the_office_orig.png){ width=25% }
 
-![Bild mit (mehrfachem) Blureffekt](img/10_the_office_blur.png)
+![Bild mit (mehrfachem) Blureffekt](docs/10_the_office_blur.png){ width=25% }
 
 Erweitern Sie die bestehende Lösung der Aufgabe `FlipImage` um eine
 weitere Methode `blurImage``(Image img)`, die ebenfalls durch Tastendruck aufgerufen werden kann.Im Gegensatz zum einfachen Spiegeln reicht es hierbei nicht aus, einzelne Pixel zu vertauschen, sondern Sie müssen auch die umliegenden Pixel miteinbeziehen (kontextabhängige Pixelmanipulation).
@@ -199,7 +199,7 @@ Auf diese Weise können Sie die Variablen x und y wie Koordinaten im Bild verwen
 
 Für den Punkt an der Stelle y\|x benötigen Sie also Farbwerte der Punkte um diesen Punkt herum, um dann den Durchschnittswert der Farben zu errechnen und somit das Bild etwas verschwimmen zu lassen.
 
-![image](img/10_blur.png)
+![Blur-Verfahren](docs/10_blur.png){ width=25% }
 
 Errechnen Sie nun von allen umliegenden Pixeln (siehe oben) und dem
 Pixel selbst aus der entsprechenden Farbe die Durchschnittswerte für
@@ -215,4 +215,4 @@ Beachten Sie dabei, dass überprüft werden muss, ob der entsprechende
 Pixel überhaupt noch im Bild liegt (bei \[0\]\[0\] liegen die Pixel
 links und darüber nicht mehr im Array).
 
-![image](img/10_blur2.png)
+![Blir Verfahren für Ecken eines Bildes](docs/10_blur2.png){ width=25% }
