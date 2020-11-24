@@ -3,6 +3,7 @@ package Cars;
 import de.ur.mi.oop.app.GraphicsApp;
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.colors.Colors;
+import de.ur.mi.oop.launcher.GraphicsAppLauncher;
 
 public class Cars extends GraphicsApp {
 
@@ -35,5 +36,9 @@ public class Cars extends GraphicsApp {
     private void setupCanvas() {
         setCanvasSize(CANVAS_WIDTH, CANVAS_HEIGHT);
         setFrameRate(FRAME_RATE);
+    }
+
+    public static void main(String[] args) {
+        GraphicsAppLauncher.launch();
     }
 }
