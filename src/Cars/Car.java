@@ -21,7 +21,16 @@ public class Car {
         this.canvasWidth = canvasWidth;
         random = new Random();
 
-        Color carColor = Colors.getRandomColor();
+        int low = 0;
+        int high = 256;
+
+        int r = random.nextInt(high - low) + low;
+        int g = random.nextInt(high - low) + low;
+        int b = random.nextInt(high - low) + low;
+        int a = random.nextInt(high - low) + low;
+
+        Color carColor = new Color(r, g, b, a);
+
         int randomYPos = getRandomYPos(carHeight, canvasHeight);
         speed = getRandomSpeed();
 
